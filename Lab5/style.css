@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/* Правила для пристроїв друку (Варіант 11) */
+@page {
+  size: auto;
+  marks: cross;
+}
+
+/* Правила для мовних / звукових пристроїв (Варіант 11) */
+@media aural, speech {
+  body {
+    volume: medium;
+    azimuth: center;
+    elevation: lower;
+    speech-rate: medium;
+    pitch: x-low;
+    pitch-range: 50;
+    richness: 60;
+    speak: normal;
+    speak-numeral: continuous;
+  }
+
+  .silent-hint {
+    volume: silent;
+    cue-before: url("beep.wav");
+    cue: url("notify.wav") url("end.wav");
+    pause-before: 200ms;
+    pause-after: 300ms;
+    azimuth: center-left;
+    speech-rate: x-fast;
+  }
+}
+
+/* Базові стилі сторінки та шрифти */
+body {
+  background-color: #f4efe6;
+  color: #2b2118;
+  font-family: "Lucida Sans", Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 150%;
+  margin: 0;
+  padding: 25px;
+  orphans: 3;
+  widows: 3;
+}
+
+.page-wrapper {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  background-color: #fffdf9;
+  border: 2px groove #8d6e63;
+}
+
+h1 {
+  font-family: Cochin, Times, serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #3e2723;
+  text-shadow: #c5a880 2px 2px 3px;
+  letter-spacing: 1px;
+  border-bottom: 2px dotted #8d6e63;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+.subtitle-info {
+  font-weight: 200;
+  font-stretch: expanded;
+  text-indent: 3%;
+  color: #5d4037;
+}
+
+/* Оформлення блоків форми */
+fieldset {
+  margin-bottom: 18px;
+  padding: 15px 18px;
+  background-color: #faf3e8;
+  border: 1px solid #bcaaa4;
+  page-break-before: auto;
+}
+
+.fieldset-legend {
+  font-family: Helvetica, sans-serif;
+  font-weight: 700;
+  font-variant: small-caps;
+  font-stretch: extra-expanded;
+  color: #3e2723;
+  background-color: #efe3d0;
+  padding: 2px 10px;
+  border: 1px solid #8d6e63;
+  letter-spacing: 1px;
+}
+
+.form-row {
+  margin-bottom: 12px;
+}
+
+.field-label {
+  display: inline-block;
+  width: 240px;
+  vertical-align: top;
+  font: menu;
+  font-weight: 700;
+  color: #3e2723;
+  text-transform: capitalize;
+  padding-top: 4px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 14px;
+  padding: 6px 8px;
+  border: 1px solid #8d6e63;
+  background-color: #ffffff;
+  color: #2b2118;
+  width: 290px;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  background-color: #fff8e7;
+  outline: 2px solid #8d6e63;
+}
+
+.form-input:invalid {
+  border-left: 4px solid #b71c1c;
+}
+
+.opt-item {
+  font-family: Times, serif;
+  font-stretch: ultra-condensed;
+}
+
+.pre-note {
+  white-space: pre;
+  background-color: #efe3d0;
+  padding: 8px 12px;
+  border-left: 3px solid #6d4c41;
+  font-size: 13px;
+  overflow-x: auto;
+}
+
+.stock-meter {
+  width: 220px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.submit-btn {
+  background-color: #3e2723;
+  color: #f5e6cc;
+  font-weight: 700;
+  font-variant: small-caps;
+  padding: 10px 22px;
+  border: 2px groove #d4af37;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #5d4037;
+}
+
+.secondary-btn {
+  background-color: #d7ccc8;
+  color: #3e2723;
+  padding: 8px 14px;
+  border: 1px solid #8d6e63;
+  margin-left: 10px;
+}
+
+.print-footer {
+  page-break-after: always;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #5d4037;
+}

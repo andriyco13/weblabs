@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/* Базові налаштування та фон через контекстні селектори */
+html body {
+  background-color: #f4efe6 !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23d6c7b2'/%3E%3C/svg%3E");
+  background-attachment: scroll;
+  background-position: 10px 10px;
+  color: #2b2118;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  line-height: 150%;
+  direction: ltr;
+  unicode-bidi: normal;
+  margin-top: 0px;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+/* Фіксована верхня панель навігації (Селектор ідентифікатора) */
+#top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  max-height: 60px;
+  z-index: auto;
+  background-color: #3e2723;
+  background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='4' height='4' fill='%234e342e'/%3E%3C/svg%3E");
+  background-attachment: scroll;
+  background-position: left top;
+  padding-top: 10px;
+  padding-left: 5%;
+  border-bottom-width: thin;
+  border-bottom-color: #d4af37;
+  border-style: groove;
+}
+
+/* Посилання навігації та псевдоклас :visited */
+#top-nav .nav-link {
+  display: inline;
+  color: #f5e6cc;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px;
+  border-width: thin;
+  border-top-style: dotted;
+  border-top-color: #d4af37;
+  border-left-style: none;
+}
+
+#top-nav .nav-link:visited {
+  color: #d7ccc8;
+}
+
+/* Основний контейнер з багаторівневою вкладеністю */
+.page-wrapper {
+  width: 90%;
+  max-width: 960px;
+  height: auto;
+  max-height: none;
+  margin-top: 75px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 20px;
+  background-color: #fffdf9;
+  border-width: 2px;
+  border-style: groove;
+  border-top-color: #8d6e63;
+  border-bottom-color: #5d4037;
+  border-left-color: #a1887f;
+}
+
+/* Вкладені рівні карток (Контекстний селектор) */
+.page-wrapper .level-1 .level-2 {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 12px;
+  padding-left: 15px;
+  background-color: #faf3e8;
+  border-left-width: 4px;
+  border-left-style: dashed;
+  border-left-color: #795548;
+  border-top-style: none;
+}
+
+/* Селектор сусідів (+) */
+#main-title + #sub-title {
+  margin-top: 8px;
+  color: #6d4c41;
+  border-bottom-width: 2px;
+  border-style: dotted;
+  border-bottom-color: #bcaaa4;
+  line-height: normal;
+}
+
+/* Селектори атрибутів */
+[title] {
+  outline-width: 1px;
+  outline-color: #c5a880;
+}
+
+[class~="highlight-card"] {
+  background-color: #f3e5d0;
+  border-right-width: 3px;
+  border-style: dashed;
+  border-top-color: #8d6e63;
+}
+
+[href*="company"] {
+  font-weight: bold;
+  border-bottom-width: thin;
+  border-style: dotted;
+}
+
+/* Псевдокласи структури та стану */
+.level-2 .block-item:first-child {
+  margin-top: 2%;
+  padding-top: 8px;
+  border-top-style: groove;
+  border-top-color: #a1887f;
+}
+
+.level-2 .block-item:last-child {
+  margin-right: 2%;
+  padding-left: 12px;
+  border-style: none;
+}
+
+.news-feed .news-item:last-of-type {
+  border-right-width: thin;
+  border-style: dashed;
+  border-bottom-color: #6d4c41;
+}
+
+/* Порожній блок для демонстрації :empty та display: none */
+.empty-banner:empty {
+  display: none;
+  height: 0px;
+}
+
+/* Псевдоелементи ::first-line та ::selection */
+.lead-text::first-line {
+  font-weight: bold;
+  color: #4e342e;
+  line-height: 160%;
+}
+
+.page-wrapper ::selection {
+  background-color: #5d4037;
+  color: #ffffff;
+}
+
+/* Обтікання (float та clear) */
+.float-badge-left {
+  float: left;
+  width: 160px;
+  height: 60px;
+  margin-right: 15px;
+  margin-top: 5px;
+  border-width: thin;
+  border-style: dotted;
+  border-top-color: #3e2723;
+}
+
+.float-badge-right {
+  float: right;
+  width: 180px;
+  padding: 8px;
+  margin-left: 15px;
+  background-color: #efe3d0;
+  border-left-style: groove;
+  border-left-color: #5d4037;
+}
+
+.clear-block {
+  clear: right;
+  position: static;
+  padding-top: 10px;
+}
+
+/* Табличне відображення за допомогою display (без HTML-тегу table) */
+.css-catalog-table {
+  width: 100%;
+  margin-top: 15px;
+  border-width: 1px;
+  border-style: groove;
+  border-top-color: #4e342e;
+  border-bottom-color: #4e342e;
+  border-left-color: #4e342e;
+}
+
+.css-table-caption {
+  display: table-caption;
+  font-weight: bold;
+  padding: 6px;
+  background-color: #d7ccc8;
+}
+
+.css-table-col {
+  display: table-column;
+}
+
+.css-table-footer {
+  display: table-footer-group;
+  background-color: #e6dcd3;
+  font-size: 90%;
+}
+
+/* Вертикальне вирівнювання (vertical-align) */
+.align-baseline { vertical-align: baseline; }
+.align-middle   { vertical-align: middle; }
+.align-top      { vertical-align: top; }
+.align-tbottom  { vertical-align: text-bottom; }
+
+/* Прихований службовий рядок (visibility: collapse) */
+.collapsed-note {
+  visibility: collapse;
+}
+
+.visible-note {
+  visibility: visible;
+}
+
+/* Переповнення (overflow) та обрізка (clip) */
+.overflow-box {
+  width: 95%;
+  height: 75px;
+  overflow: hidden;
+  padding: 8px;
+  background-color: #f9f1e4;
+  border-width: thin;
+  border-style: dotted;
+}
+
+.overflow-visible-box {
+  overflow: visible;
+  margin-top: 10px;
+}
+
+.clipped-stamp {
+  position: fixed;
+  top: 60px;
+  right: 15px;
+  width: 120px;
+  height: 40px;
+  clip: rect(0px, 120px, 40px, 0px);
+  background-color: #3e2723;
+  color: #f4efe6;
+  padding-left: 8px;
+  padding-top: 6px;
+}
+
+/* Двонаправлений текст (unicode-bidi: embed) */
+.bidi-code {
+  unicode-bidi: embed;
+  direction: ltr;
+  background-color: #e8dcc8;
+  padding: 2px;
+}
+
+/* Поля форми для псевдокласів :enabled та :invalid */
+.quick-search-box .search-input:enabled {
+  background-color: #ffffff;
+  border-width: thin;
+  border-style: groove;
+  border-top-color: #5d4037;
+  padding: 4px;
+}
+
+.quick-search-box .search-input:invalid {
+  border-left-style: dashed;
+  border-left-color: #b71c1c;
+  background-color: #ffebee;
+}
+
+/* Run-in заголовок */
+.run-in-label {
+  display: run-in;
+  font-weight: bold;
+  color: #4e342e;
+}

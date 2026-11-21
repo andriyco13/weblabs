@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+body {
+  background-color: #f4efe6;
+  color: #2b2118;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  padding: 25px;
+}
+
+.page-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #fffdf9;
+  border: 2px groove #8d6e63;
+}
+
+h1 {
+  color: #3e2723;
+  border-bottom: 2px dotted #8d6e63;
+  padding-bottom: 8px;
+  margin-top: 0;
+}
+
+/* Основна таблиця варіанта 11 */
+#variant11-table {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 2px solid #3e2723;
+  margin-top: 15px;
+  background-color: #fffdf9;
+}
+
+#variant11-table caption {
+  display: table-caption;
+  caption-side: top;
+  font-weight: bold;
+  font-size: 115%;
+  color: #3e2723;
+  padding: 10px;
+  background-color: #efe3d0;
+  border: 2px solid #3e2723;
+  border-bottom: none;
+}
+
+/* Групи та стовпці */
+.col-group-main {
+  display: table-column-group;
+}
+
+.col-item {
+  display: table-column;
+}
+
+/* Секції таблиці */
+.tbl-head {
+  display: table-header-group;
+  background-color: #4e342e;
+  color: #f5e6cc;
+}
+
+.tbl-body {
+  display: table-row-group;
+}
+
+.tbl-foot {
+  display: table-footer-group;
+  background-color: #e6d5bc;
+  font-weight: bold;
+  color: #2b2118;
+}
+
+.tbl-row {
+  display: table-row;
+}
+
+/* Осередки */
+#variant11-table th,
+#variant11-table td {
+  display: table-cell;
+  border: 1px solid #3e2723;
+  padding: 7px 6px;
+  text-align: center;
+  vertical-align: middle;
+  word-wrap: break-word;
+  speak-header: once;
+}
+
+#variant11-table th {
+  font-weight: bold;
+}
+
+.cell-data {
+  background-color: #fffaf2;
+  color: #2b2118;
+}
+
+.cell-highlight {
+  background-color: #f3e5d0;
+  font-weight: bold;
+}
+
+.cell-name {
+  text-align: left !important;
+  padding-left: 10px !important;
+}
+
+/* Додаткова компактна таблиця для демонстрації border-collapse: separate, border-spacing, empty-cells */
+.summary-table {
+  display: inline-table;
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: separate;
+  border-spacing: 6px 4px;
+  empty-cells: show;
+  border: 2px groove #8d6e63;
+  background-color: #faf3e8;
+}
+
+.summary-table caption {
+  caption-side: bottom;
+  font-style: italic;
+  padding-top: 6px;
+  color: #5d4037;
+}
+
+.summary-table th,
+.summary-table td {
+  border: 1px solid #6d4c41;
+  padding: 6px 10px;
+  background-color: #fffdf9;
+}

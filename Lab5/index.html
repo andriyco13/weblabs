@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="Author" content="Маник Микола">
+  <meta name="Description" content="Лабораторна робота №5. Сторінка форм вебпроєкту Тютюновий дім Буковина (Варіант 11).">
+  <title>Лабораторна робота №5 — Форма замовлення продукції (Варіант 11)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <h1>Оформлення оптового замовлення тютюнової продукції</h1>
+    <p class="subtitle-info">
+      Підприємство: <strong>Тютюновий дім «Буковина»</strong> | Автор: <strong>Маник Микола</strong> | Варіант 11
+    </p>
+
+    <div class="pre-note">Увага! Відвантаження продукції здійснюється лише суб'єктам господарювання
+за наявності чинної ліцензії на право торгівлі тютюновими виробами.</div>
+
+    <form id="order-form" action="#" method="post" lang="uk" dir="ltr" autocomplete="on" title="Форма замовлення та реєстрації партії товару" style="margin-top: 15px;">
+
+      <!-- БЛОК 1: Пошук товару та вибір асортименту -->
+      <fieldset>
+        <legend class="fieldset-legend" lang="uk" dir="ltr">1. Вибір торгової марки та параметрів товару</legend>
+
+        <div class="form-row">
+          <label class="field-label" for="product-search" form="order-form" lang="uk" style="color: #3e2723;">Швидкий пошук по каталогу:</label>
+          <input id="product-search" name="product_search" class="form-input" type="search" list="brands-datalist" size="35" maxlength="50" title="Введіть назву або марку сигарет" placeholder="Наприклад: Marlboro Red">
+          <datalist id="brands-datalist" class="brands-list" dir="ltr" title="Доступні позиції на складі">
+            <option value="Marlboro Red (Philip Morris)" label="Нікотин 0.8 мг — 115 грн">
+            <option value="Parliament Aqua Blue (Philip Morris)" label="Нікотин 0.4 мг — 125 грн">
+            <option value="Camel Blue (JTI Україна)" label="Нікотин 0.6 мг — 105 грн">
+            <option value="Winston Classic (JTI Україна)" label="Нікотин 0.7 мг — 100 грн">
+            <option value="Kent Silver (BAT Україна)" label="Нікотин 0.4 мг — 110 грн">
+          </datalist>
+        </div>
+
+        <div class="form-row">
+          <label class="field-label" for="brand-select" form="order-form" lang="uk" style="color: #3e2723;">Основна торгова марка *:</label>
+          <select id="brand-select" name="selected_brand" class="form-select" lang="uk" required style="background-color: #fffdf9;">
+            <optgroup label="Philip Morris International">
+              <option id="opt-1" class="opt-item" value="marlboro_red" label="Marlboro Red (0.8 мг, 115 грн)" selected>Marlboro Red</option>
+              <option id="opt-2" class="opt-item" value="parliament_aqua" label="Parliament Aqua Blue (0.4 мг, 125 грн)">Parliament Aqua Blue</option>
+            </optgroup>
+            <optgroup label="JTI Україна">
+              <option id="opt-3" class="opt-item" value="camel_blue" label="Camel Blue (0.6 мг, 105 грн)">Camel Blue</option>
+              <option id="opt-4" class="opt-item" value="winston_classic" label="Winston Classic (0.7 мг, 100 грн)">Winston Classic</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label class="field-label" for="blocks-qty" form="order-form" lang="uk" style="color: #3e2723;">Кількість блоків (10–500) *:</label>
+          <input id="blocks-qty" name="blocks_qty" class="form-input" type="number" min="10" max="500" step="5" value="20" size="10" maxlength="4" title="Вкажіть кількість блоків у замовленні" required>
+        </div>
+
+        <div class="form-row">
+          <label class="field-label" for="nicotine-limit" form="order-form" lang="uk" style="color: #3e2723;">Макс. вміст нікотину (0.1–1.0 мг):</label>
+          <input id="nicotine-limit" name="nicotine_limit" class="form-input" type="range" min="0.1" max="1.0" step="0.1" value="0.6" size="20" maxlength="4" title="Оберіть граничний вміст нікотину">
+        </div>
+
+        <div class="form-row">
+          <label class="field-label" form="order-form" lang="uk" style="color: #3e2723;">Заповненість партії на складі:</label>
+          <meter id="warehouse-load" class="stock-meter" min="0" max="100" low="20" high="85" optimum="75" value="72" title="Поточний рівень складського запасу: 72%">72%</meter>
+          <span class="silent-hint"> (72% від норми)</span>
+        </div>
+      </fieldset>
+
+      <!-- БЛОК 2: Дані замовника та ліцензія -->
+      <fieldset>
+        <legend class="fieldset-legend" lang="uk" dir="ltr">2. Реквізити покупця та умови доставки</legend>
+
+        <div class="form-row">
+          <label class="field-label" for="client-name" form="order-form" lang="uk" style="color: #3e2723;">Назва ФОП або ТОВ *:</label>
+          <input id="client-name" name="client_name" class="form-input" type="text" size="35" maxlength="60" pattern="[А-ЯІЇЄҐа-яіїєґA-Za-z0-9\s«»&quot;-]{3,60}" title="Введіть коректну назву підприємства (від 3 до 60 символів)" placeholder="ФОП Ковальчук О. В." required>
+        </div>
+
+        <div class="form-row">
+          <label class="field-label" for="client-phone" form="order-form" lang="uk" style="color: #3e2723;">Контактний телефон *:</label>
+          <input id="client-phone" name="client_phone" class="form-input" type="tel" size="25" maxlength="19" pattern="\+38\s?\(0\d{2}\)\s?\d{3}-\d{2}-\d{2}" title="Формат телефону: +38 (050) 123-45-67" placeholder="+38 (050) 123-45-67" required>
+        </div>
+
+        <div class="form-row">
+          <label class="field-label" for="delivery-week" form="order-form" lang="uk" style="color: #3e2723;">Бажаний тиждень поставки:</label>
+          <input id="delivery-week" name="delivery_week" class="form-input" type="week" value="2026-W48" size="20" maxlength="10" title="Оберіть календарний тиждень відвантаження">
+        </div>
+
+        <div class="form-row">
+          <label class="field-label" form="order-form" lang="uk" style="color: #3e2723;">Спосіб отримання партії:</label>
+          <input id="deliv-pickup" name="delivery_type" class="radio-opt" type="radio" value="pickup" title="Самовивіз зі складу в м. Чернівці" checked> Самовивіз (м. Чернівці)
+          <input id="deliv-courier" name="delivery_type" class="radio-opt" type="radio" value="courier" title="Доставка транспортом фірми по області"> Доставка по області
+        </div>
+
+        <div class="form-row">
+          <label class="field-label" for="license-file" form="order-form" lang="uk" style="color: #3e2723;">Скан-копія ліцензії (PDF/JPG):</label>
+          <input id="license-file" name="license_scan" class="form-input" type="file" accept=".pdf,.jpg,.jpeg,.png" size="30" maxlength="255" title="Прикріпіть копію діючої ліцензії">
+        </div>
+
+        <div class="form-row">
+          <label class="field-label" for="order-notes" form="order-form" lang="uk" style="color: #3e2723;">Примітки до замовлення *:</label>
+          <textarea id="order-notes" name="order_notes" class="form-textarea" rows="4" cols="38" lang="uk" dirname="order_notes.dir" minlength="10" autofocus required placeholder="Вкажіть точну адресу торгової точки та бажаний час прибуття експедитора..."></textarea>
+        </div>
+
+        <!-- Криптографічний ключ безпеки згідно з варіантом 11 -->
+        <div class="form-row">
+          <label class="field-label" for="security-key" form="order-form" lang="uk" style="color: #3e2723;">Ключ підпису накладної:</label>
+          <keygen id="security-key" name="invoice_key" form="order-form" keytype="rsa" dir="ltr" autofocus style="width: 290px;">
+        </div>
+      </fieldset>
+
+      <!-- Додаткова довідка (<details> + <summary>) -->
+      <details style="margin-bottom: 18px; padding: 10px; background-color: #efe3d0; border: 1px dashed #8d6e63;">
+        <summary id="terms-summary" dir="ltr" title="Натисніть, щоб переглянути умови зберігання та повернення" style="font-weight: bold; cursor: pointer;">
+          Умови гарантії якості та перевірки акцизних марок
+        </summary>
+        <p style="margin-bottom: 0; margin-top: 8px;">
+          Уся продукція сертифікована згідно зі стандартами ISO. Термін придатності кожної партії становить 12 місяців з дати виготовлення.
+        </p>
+      </details>
+
+      <!-- Кнопки керування формою -->
+      <div class="form-row">
+        <input type="submit" class="submit-btn" value="Відправити інформацію" size="25" maxlength="30" title="Перевірити та підтвердити замовлення" formaction="#" formenctype="application/x-www-form-urlencoded">
+
+        <button type="submit" class="secondary-btn" formaction="#" formmethod="post" formenctype="multipart/form-data" disabled title="Швидке збереження чернетки (тимчасово недоступно)">
+          Зберегти чернетку
+        </button>
+
+        <input type="image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='34'%3E%3Crect width='130' height='34' rx='4' fill='%236d4c41'/%3E%3Ctext x='65' y='21' font-family='sans-serif' font-size='12' fill='%23fffdf9' text-anchor='middle'%3EШвидкий запит%3C/text%3E%3C/svg%3E" alt="Швидкий запит без валідації" title="Надіслати попередній запит без перевірки полів" size="20" maxlength="20" formaction="#" formenctype="text/plain" formnovalidate style="vertical-align: middle; margin-left: 10px;">
+      </div>
+    </form>
+
+    <hr>
+    <footer class="print-footer">
+      © 2026 Тютюновий дім «Буковина» (м. Чернівці, вул. Головна, 120) | Розробник: Маник Микола
+    </footer>
+  </div>
+</body>
+</html>

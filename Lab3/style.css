@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+body {
+  background-color: #f4efe6;
+  color: #2b2118;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Навігаційна панель */
+.main-nav {
+  background-color: #3e2723;
+  padding: 12px 5%;
+  border-bottom: 3px groove #d4af37;
+}
+
+.main-nav a {
+  color: #f5e6cc;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+.main-nav a:hover {
+  color: #ffd54f;
+  background-color: #4e342e;
+}
+
+/* Основний контейнер */
+.page-wrapper {
+  max-width: 920px;
+  margin: 25px auto;
+  padding: 25px;
+  background-color: #fffdf9;
+  border: 2px groove #8d6e63;
+}
+
+h1 {
+  color: #3e2723;
+  border-bottom: 2px dotted #8d6e63;
+  padding-bottom: 8px;
+}
+
+h2 {
+  color: #5d4037;
+  margin-top: 24px;
+}
+
+/* Біжучий рядок */
+.ticker-bar {
+  background-color: #efe3d0;
+  color: #3e2723;
+  padding: 6px;
+  margin-bottom: 15px;
+  border: 1px dashed #8d6e63;
+  font-weight: bold;
+}
+
+.nowrap-tag {
+  white-space: nowrap;
+  background-color: #e6d5bc;
+  padding: 2px 6px;
+}
+
+/* =========================================================
+   ВЛАСТИВОСТІ СПИСКІВ ТА ЛІЧИЛЬНИКІВ (ЛР №3)
+   ========================================================= */
+
+/* 1. Маркований список: list-style-type та list-style-position */
+.brand-unordered-list {
+  list-style-type: square;
+  list-style-position: inside;
+  background-color: #faf3e8;
+  padding: 14px 18px;
+  border: 1px solid #d7ccc8;
+}
+
+/* Скорочена властивість list-style для вкладеного списку */
+.nested-sublist {
+  list-style: circle outside none;
+  margin-top: 6px;
+  color: #4e342e;
+}
+
+/* 2. Список із графічним маркером: list-style-image */
+.custom-image-list {
+  list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Crect width='10' height='10' x='1' y='1' fill='%236d4c41'/%3E%3C/svg%3E");
+  list-style-position: outside;
+  padding-left: 26px;
+}
+
+/* 3. Нумерований список із CSS-лічильниками та marker-offset */
+.supply-ordered-list {
+  list-style-type: none;
+  counter-reset: stage-counter;
+  padding-left: 10px;
+}
+
+.supply-ordered-list .step-item {
+  counter-increment: stage-counter;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background-color: #f6ede0;
+  border-left: 3px solid #8d6e63;
+}
+
+.supply-ordered-list .step-item::before {
+  content: "Етап " counter(stage-counter, upper-roman) ". ";
+  font-weight: bold;
+  color: #4e342e;
+  marker-offset: 1.5em;
+  margin-right: 8px;
+}
+
+/* 4. Списки визначень (<dl>, <dt>, <dd>) */
+.glossary-list {
+  background-color: #faf3e8;
+  padding: 14px;
+  border: 1px dotted #8d6e63;
+}
+
+.glossary-list dt {
+  font-weight: bold;
+  color: #3e2723;
+  margin-top: 10px;
+}
+
+.glossary-list dd {
+  margin-left: 24px;
+  padding-left: 10px;
+  border-left: 2px solid #bcaaa4;
+  color: #4e342e;
+}
+
+/* 5. Оформлення меню та навігаційних списків */
+.menu-directory {
+  list-style: none;
+  padding: 12px;
+  background-color: #f3e5d0;
+  border: 2px groove #8d6e63;
+}
+
+.menu-directory li {
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #fffdf9;
+  border-bottom: 1px dashed #bcaaa4;
+}
+
+.menu-directory a {
+  color: #3e2723;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-directory a:hover {
+  text-decoration: underline;
+  color: #8d6e63;
+}
+
+.context-menu-box {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #efe3d0;
+  border: 1px solid #a1887f;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="Author" content="Маник Микола">
+  <meta name="Description" content="Лабораторна робота №4. Сторінка таблиць вебпроєкту Тютюновий дім Буковина (Варіант 11).">
+  <title>Лабораторна робота №4 — Таблиці продукції (Варіант 11)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <h1>Каталог та складський облік тютюнової продукції</h1>
+    <p>Підприємство: <strong>Тютюновий дім «Буковина»</strong></p>
+
+    <!-- ОСНОВНА ТАБЛИЦЯ ЗА СХЕМОЮ ВАРІАНТА 11 (10 стовпців, 12 рядків) -->
+    <table id="variant11-table" bgcolor="#fffdf9" border="1" cellpadding="6" cellspacing="0">
+      <caption lang="uk" style="letter-spacing: 0.5px;">
+        Зведена відомість асортименту, характеристик та залишків сигарет
+      </caption>
+
+      <!-- Обов'язковий тег <colgroup> з атрибутами char, class -->
+      <colgroup class="col-group-main" char="." span="1">
+        <col class="col-item" style="width: 5%;">
+      </colgroup>
+      <colgroup class="col-group-main" char="," span="3">
+        <col class="col-item" style="width: 11%;">
+        <col class="col-item" style="width: 11%;">
+        <col class="col-item" style="width: 11%;">
+      </colgroup>
+      <colgroup class="col-group-main" char="." span="6">
+        <col class="col-item" style="width: 12%;">
+        <col class="col-item" style="width: 9%;">
+        <col class="col-item" style="width: 9%;">
+        <col class="col-item" style="width: 10%;">
+        <col class="col-item" style="width: 11%;">
+        <col class="col-item" style="width: 11%;">
+      </colgroup>
+
+      <!-- ШАПКА ТАБЛИЦІ (2 рядки) -->
+      <thead class="tbl-head" dir="ltr" char="." charoff="2" valign="middle" title="Шапка каталогу продукції" align="center">
+        <tr class="tbl-row" dir="ltr" bgcolor="#3e2723" char="." charoff="1" valign="middle">
+          <th rowspan="2" bgcolor="#3e2723" abbr="№" axis="index">№</th>
+          <th colspan="7" bgcolor="#4e342e" abbr="Характеристики" axis="specs">Детальна специфікація тютюнових виробів</th>
+          <th rowspan="2" bgcolor="#3e2723" abbr="Термін" axis="shelf-life">Термін придатності</th>
+          <th rowspan="2" bgcolor="#3e2723" abbr="Ціна" axis="price">Ціна, грн</th>
+        </tr>
+        <tr class="tbl-row" dir="ltr" bgcolor="#5d4037" char="." charoff="1" valign="middle">
+          <th colspan="3" bgcolor="#5d4037" abbr="Назва та марка" axis="brand">Назва та торгова марка</th>
+          <th bgcolor="#5d4037" abbr="Виробник" axis="maker">Виробництво</th>
+          <th bgcolor="#5d4037" abbr="Нікотин" axis="nicotine">Нікотин</th>
+          <th bgcolor="#5d4037" abbr="Смоли" axis="tar">Смоли</th>
+          <th bgcolor="#5d4037" abbr="Залишок" axis="stock">Блоків</th>
+        </tr>
+      </thead>
+
+      <!-- ТІЛО ТАБЛИЦІ (3 групи по 3 рядки = 9 рядків за схемою варіанта 11) -->
+      <tbody class="tbl-body">
+        <!-- БЛОК 1: Лінійка Philip Morris (рядки 1–3) -->
+        <tr class="tbl-row" dir="ltr" bgcolor="#fffaf2" char="." charoff="1" valign="middle">
+          <td rowspan="3" class="cell-highlight" style="font-size: 110%;" title="Група виробника №1">1</td>
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Позиція 1.1">Marlboro Red (Philip Morris)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Країна виробництва">Україна</td>
+          <td colspan="2" class="cell-highlight" style="color: #4e342e;" title="Нікотин 0.8 мг / Смоли 10 мг">0.8 мг / 10 мг</td>
+          <td class="cell-data" style="color: #2b2118;" title="Кількість на складі">140</td>
+          <td class="cell-data" style="color: #2b2118;" title="Гарантійний термін">12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Роздрібна ціна за пачку">115.00</td>
+        </tr>
+        <tr class="tbl-row" dir="ltr" bgcolor="#fffdf9" char="." charoff="1" valign="middle">
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Позиція 1.2">Parliament Aqua Blue (Philip Morris)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Країна виробництва">Україна</td>
+          <td class="cell-data" style="color: #2b2118;" title="Вміст нікотину">0.4 мг</td>
+          <td colspan="2" class="cell-highlight" style="color: #4e342e;" title="Смоли 5 мг / Склад 95 блоків">5 мг (95 бл.)</td>
+          <td class="cell-data" style="color: #2b2118;" title="Гарантійний термін">12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Роздрібна ціна за пачку">125.00</td>
+        </tr>
+        <tr class="tbl-row" dir="ltr" bgcolor="#fffaf2" char="." charoff="1" valign="middle">
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Позиція 1.3">Bond Street Blue Selection (Philip Morris)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Країна виробництва">Україна</td>
+          <td class="cell-data" style="color: #2b2118;" title="Вміст нікотину">0.5 мг</td>
+          <td class="cell-data" style="color: #2b2118;" title="Вміст смол">6 мг</td>
+          <td colspan="2" class="cell-highlight" style="color: #4e342e;" title="180 блоків, термін 12 міс.">180 бл. / 12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Роздрібна ціна за пачку">98.00</td>
+        </tr>
+
+        <!-- БЛОК 2: Лінійка JTI (рядки 4–6) -->
+        <tr class="tbl-row" dir="ltr" bgcolor="#fffdf9" char="." charoff="1" valign="middle">
+          <td rowspan="3" class="cell-highlight" style="font-size: 110%;" title="Група виробника №2">2</td>
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Позиція 2.1">Camel Blue (JTI)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Країна виробництва">Україна</td>
+          <td colspan="2" class="cell-highlight" style="color: #4e342e;" title="Нікотин 0.6 мг / Смоли 8 мг">0.6 мг / 8 мг</td>
+          <td class="cell-data" style="color: #2b2118;" title="Кількість на складі">165</td>
+          <td class="cell-data" style="color: #2b2118;" title="Гарантійний термін">12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Роздрібна ціна за пачку">105.00</td>
+        </tr>
+        <tr class="tbl-row" dir="ltr" bgcolor="#fffaf2" char="." charoff="1" valign="middle">
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Позиція 2.2">Winston Classic (JTI)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Країна виробництва">Україна</td>
+          <td class="cell-data" style="color: #2b2118;" title="Вміст нікотину">0.7 мг</td>
+          <td colspan="2" class="cell-highlight" style="color: #4e342e;" title="Смоли 9 мг / Склад 210 блоків">9 мг (210 бл.)</td>
+          <td class="cell-data" style="color: #2b2118;" title="Гарантійний термін">12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Роздрібна ціна за пачку">100.00</td>
+        </tr>
+        <tr class="tbl-row" dir="ltr" bgcolor="#fffdf9" char="." charoff="1" valign="middle">
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Позиція 2.3">Sobranie Black Russian (JTI)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Країна виробництва">ЄС / Україна</td>
+          <td class="cell-data" style="color: #2b2118;" title="Вміст нікотину">0.7 мг</td>
+          <td class="cell-data" style="color: #2b2118;" title="Вміст смол">7 мг</td>
+          <td colspan="2" class="cell-highlight" style="color: #4e342e;" title="60 блоків, термін 12 міс.">60 бл. / 12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Роздрібна ціна за пачку">135.00</td>
+        </tr>
+
+        <!-- БЛОК 3: Лінійка BAT (рядки 7–9) -->
+        <tr class="tbl-row" dir="ltr" bgcolor="#fffaf2" char="." charoff="1" valign="middle">
+          <td rowspan="3" class="cell-highlight" style="font-size: 110%;" title="Група виробника №3">3</td>
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Позиція 3.1">Kent Silver (BAT)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Країна виробництва">Україна</td>
+          <td colspan="2" class="cell-highlight" style="color: #4e342e;" title="Нікотин 0.4 мг / Смоли 4 мг">0.4 мг / 4 мг</td>
+          <td class="cell-data" style="color: #2b2118;" title="Кількість на складі">130</td>
+          <td class="cell-data" style="color: #2b2118;" title="Гарантійний термін">12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Роздрібна ціна за пачку">110.00</td>
+        </tr>
+        <tr class="tbl-row" dir="ltr" bgcolor="#fffdf9" char="." charoff="1" valign="middle">
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Позиція 3.2">Rothmans Demi Blue (BAT)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Країна виробництва">Україна</td>
+          <td class="cell-data" style="color: #2b2118;" title="Вміст нікотину">0.5 мг</td>
+          <td colspan="2" class="cell-highlight" style="color: #4e342e;" title="Смоли 6 мг / Склад 190 блоків">6 мг (190 бл.)</td>
+          <td class="cell-data" style="color: #2b2118;" title="Гарантійний термін">12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Роздрібна ціна за пачку">95.00</td>
+        </tr>
+        <tr class="tbl-row" dir="ltr" bgcolor="#fffaf2" char="." charoff="1" valign="middle">
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Позиція 3.3">Lucky Strike Original Red (BAT)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Країна виробництва">Україна</td>
+          <td class="cell-data" style="color: #2b2118;" title="Вміст нікотину">0.8 мг</td>
+          <td class="cell-data" style="color: #2b2118;" title="Вміст смол">9 мг</td>
+          <td colspan="2" class="cell-highlight" style="color: #4e342e;" title="120 блоків, термін 12 міс.">120 бл. / 12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Роздрібна ціна за пачку">102.00</td>
+        </tr>
+      </tbody>
+
+      <!-- ПІДВАЛ ТАБЛИЦІ (12-й рядок за схемою варіанта 11) -->
+      <tfoot class="tbl-foot">
+        <tr class="tbl-row" dir="ltr" bgcolor="#e6d5bc" char="." charoff="1" valign="middle">
+          <td class="cell-data" style="font-weight: bold;" title="Підсумок">Σ</td>
+          <td colspan="3" class="cell-data cell-name" style="font-weight: bold;" title="Усього найменувань">Разом по складу (9 позицій)</td>
+          <td class="cell-data" style="color: #3e2723;" title="Регіон поставки">UA / EU</td>
+          <td class="cell-data" style="color: #3e2723;" title="Середній нікотин">0.6 мг</td>
+          <td class="cell-data" style="color: #3e2723;" title="Середні смоли">7.3 мг</td>
+          <td class="cell-data" style="font-weight: bold;" title="Загальна кількість блоків">1290</td>
+          <td class="cell-data" style="color: #3e2723;" title="Стандартний термін">12 міс.</td>
+          <td class="cell-data" style="font-weight: bold;" title="Середня ціна">109.44</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- ДОДАТКОВА ТАБЛИЦЯ (демонстрація роздільних рамок та порожніх комірок) -->
+    <table class="summary-table" id="warehouse-schedule" bgcolor="#faf3e8" border="1" cellpadding="5" cellspacing="4">
+      <caption lang="uk" style="font-size: 95%;">Графік відвантаження оптових замовлень зі складу в м. Чернівці</caption>
+      <tr>
+        <th bgcolor="#d7ccc8" abbr="День" axis="day">День тижня</th>
+        <th bgcolor="#d7ccc8" abbr="Час" axis="time">Години роботи</th>
+        <th bgcolor="#d7ccc8" abbr="Примітка" axis="note">Примітка</th>
+      </tr>
+      <tr>
+        <td class="cell-data" style="font-weight: bold;" title="Будні дні">Пн — Пт</td>
+        <td class="cell-data" style="color: #2b2118;" title="Робочий час">08:30 — 18:00</td>
+        <td class="cell-data" style="color: #5d4037;" title="Без перерви">Прийом та видача замовлень</td>
+      </tr>
+      <tr>
+        <td class="cell-data" style="font-weight: bold;" title="Субота">Субота</td>
+        <td class="cell-data" style="color: #2b2118;" title="Скорочений день">09:00 — 14:00</td>
+        <td class="cell-data" style="color: #5d4037;" title="За попереднім записом"></td>
+      </tr>
+    </table>
+
+    <hr>
+    <small>© 2026 Тютюновий дім «Буковина» | Розробник: Маник Микола</small>
+  </div>
+</body>
+</html>

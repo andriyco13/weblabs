@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="Author" content="Маник Микола">
+  <meta name="Description" content="Лабораторна робота №3. Інформація про Тютюновий дім Буковина у вигляді списків.">
+  <title>Списки — Тютюновий дім «Буковина»</title>
+  <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" sizes="any" class="main-stylesheet">
+</head>
+<body>
+  <nav class="main-nav">
+    <a id="nav-menu" href="menu.html" rel="bookmark" title="Повернутися до меню проєкту" shape="rect" style="font-weight: bold;">← Меню проєкту</a>
+    <a id="nav-lists" href="lists.html" rel="contents" title="Поточна сторінка списків" shape="rect" style="color: #ffd54f;">Списки підприємства</a>
+  </nav>
+
+  <main class="page-wrapper">
+    <marquee class="ticker-bar" dir="ltr" direction="left" behavior="alternate" loop="5" truespeed>
+      Офіційний каталог, умови поставки та термінологія підприємства «Тютюновий дім "Буковина"»!
+    </marquee>
+
+    <h1 id="lists-top">Інформація про підприємство у вигляді списків</h1>
+
+    <!-- 1. МАРКОВАНІ СПИСКИ (<ul>) -->
+    <section id="brands-section">
+      <h2>1. Асортимент торгових марок (марковані списки)</h2>
+      <ul id="brands-ul" class="brand-unordered-list" value="square" start="1" style="list-style-type: square;">
+        <li id="b-item-1" class="brand-item" value="1" compact>
+          <strong>Philip Morris International</strong> — продукція преміального та середнього сегменту:
+          <ul id="pm-ul" class="nested-sublist" value="square" start="1" style="list-style-type: circle;">
+            <li id="pm-1" class="sub-item" value="1" compact><bdi>Marlboro Red</bdi> — вміст нікотину: 0.8 мг, виробництво: Україна, термін придатності: 12 міс.</li>
+            <li id="pm-2" class="sub-item" value="2" compact><bdi>Parliament Aqua Blue</bdi> — вміст нікотину: 0.4 мг, вугільний фільтр, термін придатності: 12 міс.</li>
+          </ul>
+        </li>
+        <li id="b-item-2" class="brand-item" value="2" compact>
+          <strong>JTI (Japan Tobacco International)</strong> — класичні та компактні серії:
+          <ul id="jti-ul" class="nested-sublist" value="square" start="1" style="list-style-type: circle;">
+            <li id="jti-1" class="sub-item" value="1" compact><bdi>Camel Blue</bdi> — вміст нікотину: 0.6 мг, виробництво: Україна, термін придатності: 12 міс.</li>
+            <li id="jti-2" class="sub-item" value="2" compact><bdi>Winston Classic</bdi> — вміст нікотину: 0.7 мг, стандартна пачка (20 шт.), термін придатності: 12 міс.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Ключові стандарти роботи складу (графічний маркер):</h3>
+      <ul id="standards-ul" class="custom-image-list" value="square" start="1" style="padding-left: 28px;">
+        <li id="st-1" class="std-item" value="1" compact>Контроль наявності <nobr class="nowrap-tag">акцизної марки</nobr> державного зразка на кожній пачці.</li>
+        <li id="st-2" class="std-item" value="2" compact>Підтримання стабільної температури зберігання (+18°C) та вологості повітря (60%).</li>
+        <li id="st-3" class="std-item" value="3" compact>Відвантаження продукції виключно за наявності чинної ліцензії у покупця.</li>
+      </ul>
+    </section>
+
+    <!-- 2. НУМЕРОВАНИЙ СПИСОК (<ol>) -->
+    <section id="steps-section">
+      <h2>2. Порядок оформлення оптового замовлення (нумерований список)</h2>
+      <ol id="order-ol" class="supply-ordered-list" title="Покроковий регламент співпраці" type="1">
+        <li id="step-1" class="step-item" value="1" compact>
+          Подання клієнтом копії ліцензії на право торгівлі тютюновими виробами та реєстраційних документів.
+        </li>
+        <li id="step-2" class="step-item" value="2" compact>
+          Узгодження асортиментної специфікації із зазначенням марок, кількості блоків та актуальних цін.
+        </li>
+        <li id="step-3" class="step-item" value="3" compact>
+          Оформлення електронної акцизної накладної та товарно-транспортної накладної.
+        </li>
+        <li id="step-4" class="step-item" value="4" compact>
+          Комплектація замовлення на центральному складі (м. Чернівці, вул. Головна, 120) та доставка.
+        </li>
+      </ol>
+    </section>
+
+    <!-- 3. СПИСОК ВИЗНАЧЕНЬ (<dl>, <dt>, <dd>) -->
+    <section id="glossary-section">
+      <h2>3. Словник термінів підприємства (список визначень)</h2>
+      <dl id="terms-dl" class="glossary-list">
+        <dt dir="ltr" title="Обов'язковий елемент маркування" style="color: #3e2723;">Акцизна марка</dt>
+        <dd id="dd-1" style="margin-bottom: 10px;">
+          Спеціальний знак для маркування тютюнових виробів, що підтверджує сплату акцизного податку та легальність походження товару.
+        </dd>
+
+        <dt dir="ltr" title="Одиниця оптового обліку" style="color: #3e2723;">Блок сигарет</dt>
+        <dd id="dd-2" style="margin-bottom: 10px;">
+          Групова картонна або плівкова упаковка, яка містить 10 стандартних пачок (200 сигарет однієї торгової марки).
+        </dd>
+
+        <dt dir="ltr" title="Обов'язковий параметр у картці товару" style="color: #3e2723;">Вміст нікотину та смол</dt>
+        <dd id="dd-3" style="margin-bottom: 10px;">
+          Нормовані показники у міліграмах на одну сигарету (наприклад, 0.4–0.8 мг нікотину), що визначаються згідно зі стандартами ISO.
+        </dd>
+
+        <dt dir="ltr" title="Обмеження зберігання" style="color: #3e2723;">Термін придатності</dt>
+        <dd id="dd-4" style="margin-bottom: 4px;">
+          Період часу (зазвичай 12 місяців із дати виробництва, вказаної на дні пачки), протягом якого продукція зберігає належні споживчі властивості.
+        </dd>
+      </dl>
+    </section>
+
+    <p>
+      <a id="back-menu-btn" href="menu.html" rel="prev" title="Повернутися до головного меню" shape="rect" style="font-weight: bold; color: #3e2723;">
+        ← Повернутися на сторінку меню (menu.html)
+      </a>
+    </p>
+
+    <hr>
+    <small>© 2026 Тютюновий дім «Буковина» | Автор: Маник Микола</small>
+  </main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="Author" content="Маник Микола">
+  <meta name="Description" content="Загальна інформація про підприємство з продажу сигарет.">
+  <title>Про фірму — Тютюновий дім «Буковина»</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav id="top-nav">
+    <a class="nav-link" href="index.html">Автор</a>
+    <a class="nav-link" href="company.html">Про фірму</a>
+    <a class="nav-link" href="news.html">Новини</a>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="level-1">
+      <h1 id="main-title">Тютюновий дім «Буковина»</h1>
+      <h2 id="sub-title" title="Профіль діяльності">Оптова та роздрібна дистрибуція</h2>
+
+      <div class="level-2">
+        <div class="block-item">
+          <img id="company-logo" class="float-badge-left" title="Логотип компанії" src="https://via.placeholder.com/160x60?text=Tobacco+House" alt="Логотип Тютюновий дім Буковина">
+          <p class="lead-text">
+            Підприємство спеціалізується на оптовому та роздрібному продажу сигарет сертифікованих виробників із дотриманням усіх норм зберігання та обліку.
+          </p>
+        </div>
+
+        <div class="block-item">
+          <p>
+            <dfn class="term">Акцизна марка</dfn> — спеціальний знак для маркування тютюнових виробів.
+            У каталозі використовується стандарт <abbr lang="en" class="abbr-item" title="International Organization for Standardization">ISO</abbr>:
+            <span class="align-baseline">[baseline]</span>
+            <span class="align-middle">[middle]</span>
+            <span class="align-top">[top]</span>
+            <span class="align-tbottom">[text-bottom]</span>.
+          </p>
+        </div>
+
+        <div class="block-item highlight-card">
+          <h3>Асортимент продукції (обов'язкові характеристики)</h3>
+          <div class="css-catalog-table">
+            <div class="css-table-caption">Прайс-лист основних позицій</div>
+            <div class="css-table-col"></div>
+            <pre id="catalog-list" title="Прайс-лист та параметри товарів">
+Назва             | Марка        | Виробництво          | Нікотин | Термін придатності | Ціна
+-----------------------------------------------------------------------------------------------
+Marlboro Red      | Marlboro     | Philip Morris        | 0.8 мг  | 12 місяців         | 115 грн
+Camel Blue        | Camel        | JTI Україна          | 0.6 мг  | 12 місяців         | 105 грн
+Parliament Aqua   | Parliament   | Philip Morris        | 0.4 мг  | 12 місяців         | 125 грн
+Winston Classic   | Winston      | JTI Україна          | 0.7 мг  | 12 місяців         | 100 грн
+            </pre>
+            <div class="css-table-footer">Ціни вказано з урахуванням акцизного податку та ПДВ.</div>
+          </div>
+          <div class="collapsed-note">Службовий рядок приховано через visibility: collapse</div>
+        </div>
+
+        <div class="block-item quick-search-box">
+          <p>
+            Код терміналу складу: <kbd class="bidi-code">FILTER_NIC</kbd>, параметр <var>max_mg</var>.
+            Перевірка коду партії (тільки цифри):
+            <input class="search-input" type="text" pattern="[0-9]+" value="ABC-invalid" title="Введіть цифровий код">
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <address class="contacts">
+      Адреса головного офісу: м. Чернівці, вул. Головна, 120 | Телефон: +38 (0372) 55-11-08
+    </address>
+  </div>
+</body>
+</html>

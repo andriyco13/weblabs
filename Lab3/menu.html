@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="Author" content="Маник Микола">
+  <meta name="Description" content="Лабораторна робота №3. Сторінка меню Web-проєкту Тютюновий дім Буковина.">
+  <title>Меню — Тютюновий дім «Буковина»</title>
+  <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" sizes="any" class="main-stylesheet">
+</head>
+<body>
+  <nav class="main-nav">
+    <a id="nav-menu" href="menu.html" rel="bookmark" title="Головне меню проєкту" shape="rect" style="color: #ffd54f;">Меню проєкту</a>
+    <a id="nav-lists" href="lists.html" rel="contents" title="Сторінка зі списками підприємства" shape="rect" style="font-weight: bold;">Списки підприємства</a>
+  </nav>
+
+  <main class="page-wrapper">
+    <marquee class="ticker-bar" dir="ltr" direction="left" behavior="scroll" loop="infinite" truespeed>
+      Тютюновий дім «Буковина» — навігаційне меню інформаційної системи підприємства!
+    </marquee>
+
+    <h1 id="top-anchor">Головне меню Web-проєкту</h1>
+    <p>Розробник: <strong>Маник Микола</strong> | Тема: продаж тютюнових виробів (варіант 11)</p>
+
+    <!-- Внутрішні посилання на поточну сторінку -->
+    <p>
+      Швидкий перехід по поточній сторінці:
+      <nobr class="nowrap-tag">
+        <a id="jump-main" href="#sec-main-nav" rel="bookmark" title="До навігації по сторінках" shape="rect" style="color: #4e342e;">[1. Навігація по сторінках]</a>
+      </nobr> |
+      <nobr class="nowrap-tag">
+        <a id="jump-sections" href="#sec-lists-anchors" rel="bookmark" title="До розділів сторінки списків" shape="rect" style="color: #4e342e;">[2. Розділи списків]</a>
+      </nobr> |
+    </p>
+
+    <!-- 1. Навігація по сторінках -->
+    <h2 id="sec-main-nav">1. Сторінки Web-проєкту</h2>
+    <dir dir="ltr" style="padding-left: 15px; background-color: #faf3e8; border: 1px solid #d7ccc8;">
+      <ul id="pages-ul" class="menu-directory" value="square" start="1" style="list-style-type: square;">
+        <li id="p-item-1" class="menu-item" value="1" compact>
+          <a id="link-menu-self" href="menu.html" rel="bookmark" title="Поточна сторінка меню" shape="rect" style="font-size: 105%;">
+            Головне меню (menu.html)
+          </a> — навігація по розділах проєкту та швидкі команди.
+        </li>
+        <li id="p-item-2" class="menu-item" value="2" compact>
+          <a id="link-lists-page" href="lists.html" rel="contents" title="Відкрити сторінку зі списками" shape="rect" style="font-size: 105%;">
+            Інформація про підприємство у вигляді списків (lists.html)
+          </a> — каталог брендів, порядок замовлення та словник термінів.
+        </li>
+      </ul>
+    </dir>
+
+    <!-- 2. Перехід на конкретні закладки сторінки lists.html -->
+    <h2 id="sec-lists-anchors">2. Прямий перехід до списків підприємства</h2>
+    <ol id="anchors-ol" class="menu-directory" title="Закладки на розділи lists.html" type="1">
+      <li id="a-item-1" class="anchor-item" value="1" compact>
+        <a id="go-brands" href="lists.html#brands-section" rel="subsection" title="Перейти до маркованих списків" shape="rect" style="color: #5d4037;">
+          Асортимент торгових марок та переваги фірми (марковані списки)
+        </a>
+      </li>
+      <li id="a-item-2" class="anchor-item" value="2" compact>
+        <a id="go-steps" href="lists.html#steps-section" rel="subsection" title="Перейти до нумерованого списку" shape="rect" style="color: #5d4037;">
+          Етапи оформлення оптового замовлення (нумерований список)
+        </a>
+      </li>
+      <li id="a-item-3" class="anchor-item" value="3" compact>
+        <a id="go-glossary" href="lists.html#glossary-section" rel="subsection" title="Перейти до списку визначень" shape="rect" style="color: #5d4037;">
+          Довідник термінів та характеристик продукції (список визначень)
+        </a>
+      </li>
+    </ol>
+
+    <hr>
+    <small>© 2026 Тютюновий дім «Буковина» | Автор: Маник Микола</small>
+  </main>
+</body>
+</html>
